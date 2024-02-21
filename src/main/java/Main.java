@@ -62,5 +62,27 @@ public class Main {
         int[][] terrainMap = terrainSimulator.generateTerrainMap();
         int[][] routeMap = spaceNavigator.calculateRoute(terrainMap);
         routeVisualizer.visualizeRoute(routeMap);
+
+
+        // Ejemplo de uso del Comunicador Interplanetario
+        InterplanetaryCommunicator communicator = new InterplanetaryCommunicator();
+
+        // Ejemplo de envío y recepción de mensajes
+        String messageToEarth = "Saludos desde la base en el planeta X";
+        String receivedMessage = communicator.sendMessageToEarth(messageToEarth);
+        System.out.println("Mensaje enviado a la Tierra: " + messageToEarth);
+        System.out.println("Mensaje recibido de la Tierra: " + receivedMessage);
+
+        String messageToBase = "Hola, ¿cómo están?";
+        String receivedResponse = communicator.sendMessageToBase(messageToBase);
+        System.out.println("Mensaje enviado a la base: " + messageToBase);
+        System.out.println("Respuesta recibida de la base: " + receivedResponse);
+
+        // Ejemplo de análisis de mensajes
+        String message = "Able was I ere I saw Elba";
+        System.out.println("Cantidad de vocales en el mensaje: " + communicator.countVowels(message));
+        System.out.println("¿El mensaje es un palíndromo? " + communicator.isPalindrome(message));
+        System.out.println("Mensaje invertido: " + communicator.reverseMessage(message));
+    }
     }
     }
