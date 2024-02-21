@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         // Parte 1: Cronómetro Cósmico
@@ -27,5 +29,18 @@ public class Main {
         System.out.println("Consumo mínimo de recursos: " + minConsumption);
         System.out.println("Consumo máximo de recursos: " + maxConsumption);
         System.out.println("¿Los niveles de recursos están por debajo del umbral seguro? " + isBelowThreshold);
+
+
+        // Crear una instancia de PrimeNumberDetector y encontrar los primeros 10 números primos
+        PrimeNumberDetector primeNumberDetector = new PrimeNumberDetector();
+        List<Integer> firstPrimes = primeNumberDetector.findFirstNPrimes(10);
+        System.out.println("Los primeros 10 números primos son: " + firstPrimes);
+
+        // Crear una instancia de ComplexProblemDecomposer y descomponer un número en factores primos
+        ComplexProblemDecomposer complexProblemDecomposer = new ComplexProblemDecomposer();
+        int numberToDecompose = 60; // Ejemplo de número a descomponer
+        List<Integer> primeFactors = complexProblemDecomposer.decomposeIntoPrimeFactors(numberToDecompose);
+        System.out.println("Los factores primos de " + numberToDecompose + " son: " + primeFactors);
+
     }
 }
