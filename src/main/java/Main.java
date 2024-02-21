@@ -42,5 +42,16 @@ public class Main {
         List<Integer> primeFactors = complexProblemDecomposer.decomposeIntoPrimeFactors(numberToDecompose);
         System.out.println("Los factores primos de " + numberToDecompose + " son: " + primeFactors);
 
+
+        // Ejemplo de uso del planificador de tareas y visualizador de horarios
+        TaskPlanner taskPlanner = new TaskPlanner();
+        ScheduleVisualizer scheduleVisualizer = new ScheduleVisualizer();
+
+        // Distribuir tareas y optimizar la carga de trabajo
+        taskPlanner.distributeTasks();
+
+        // Visualizar los horarios y las cargas de trabajo
+        scheduleVisualizer.displaySchedule(taskPlanner.getTaskSchedule());
+
     }
 }
