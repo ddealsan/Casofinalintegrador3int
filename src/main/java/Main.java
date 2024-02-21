@@ -53,5 +53,14 @@ public class Main {
         // Visualizar los horarios y las cargas de trabajo
         scheduleVisualizer.displaySchedule(taskPlanner.getTaskSchedule());
 
+
+        SpaceNavigator spaceNavigator = new SpaceNavigator();
+        TerrainSimulator terrainSimulator = new TerrainSimulator();
+        RouteVisualizer routeVisualizer = new RouteVisualizer();
+
+        // Calcular y visualizar rutas de exploración y expansión de la base
+        int[][] terrainMap = terrainSimulator.generateTerrainMap();
+        int[][] routeMap = spaceNavigator.calculateRoute(terrainMap);
+        routeVisualizer.visualizeRoute(routeMap);
     }
-}
+    }
